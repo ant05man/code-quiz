@@ -26,8 +26,8 @@
    }
    
    .container {
-       width: 100vw;
-       height: 100vh;
+       width: 400px;
+       height: 600px;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -38,7 +38,7 @@
      button {
        display: inline-block;
        font-family: sans-serif;
-       background-color: #5e6df1;
+       background-color: black;
        border-radius: 10px;
        border: 3px double #cccccc;
        color: #eeeeee;
@@ -50,7 +50,7 @@
      }
    
      button:hover{
-         box-shadow: 4px 3px 6px #4450bd;
+         box-shadow: 4px 3px 6px black;
      }
    
    #startpage{
@@ -61,7 +61,7 @@
    
    #timer{
        font-family: sans-serif;
-       background-color: #5a69f0;
+       background-color: navy;
        color: #eeeeee;
        font-size: x-large;
        text-shadow: .5px .5px black;
@@ -69,6 +69,11 @@
    }
    #quiz {
        display: none;
+   }
+   #submitScore {
+      background-color: black(215, 6, 135);
+      color: black;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  
    }
    
    #result {
@@ -83,7 +88,7 @@
    }
    
    #highScore{
-       height: 1.5rem;
+       height: 200px;
        border: groove 2px;
    }
    
@@ -102,7 +107,7 @@
        justify-content: space-around;
        border-bottom-style: outset;
        margin-bottom: .5rem;
-       background-color: #5e6df1;
+       background-color: black;
        color: #eeeeee;
        font-family: sans-serif;
    }
