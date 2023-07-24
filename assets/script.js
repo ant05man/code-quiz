@@ -21,12 +21,12 @@ var buttonD = document.getElementById("d");
 
 // Quiz question object
 var quizQuestions = [{
-    question: "How many elements can you apply an 'ID' attribute to?",
-    choiceA: "As many as you want",
-    choiceB: "3",
-    choiceC: "1",
-    choiceD: "128",
-    correctAnswer: "c"},
+    question: "String values must be enclosed within ____ when being assigned to variables",
+    choiceA: "commas",
+    choiceB: "curly brackets",
+    choiceC: "quotes",
+    choiceD: "parenthesis",
+    correctAnswer: "b"},
   {
     question: "What does DOM stand for?",
     choiceA: "Document Object Model",
@@ -35,12 +35,12 @@ var quizQuestions = [{
     choiceD: "Desktop Oriented Mode",
     correctAnswer: "a"},
    {
-    question: "What is used primarily to add styling to a web page?",
-    choiceA: "HTML",
-    choiceB: "CSS",
-    choiceC: "Python",
-    choiceD: "React.js",
-    correctAnswer: "b"},
+    question: "A very useful tool used during development and debugging for printing content to the debugger is?",
+    choiceA: "JavaScript",
+    choiceB: "terminal/bash",
+    choiceC: "for loops",
+    choiceD: "console log",
+    correctAnswer: "d"},
     {
     question: "What HTML tags are JavaScript code wrapped in?",
     choiceA: "&lt;div&gt;",

@@ -51,6 +51,7 @@
    
      button:hover{
          box-shadow: 4px 3px 6px black;
+         background-color: purple;
      }
    
    #startpage{
@@ -72,7 +73,8 @@
    }
    #submitScore {
       background-color: black(215, 6, 135);
-      color: black;
+      color: white;
+      font-size: 24px;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  
    }
    
