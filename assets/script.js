@@ -11,15 +11,15 @@ var highscoreContainer = document.getElementById("highscoreContainer");
 var highscoreDiv = document.getElementById("high-scorePage");
 var highscoreInputName = document.getElementById("initials");
 var highscoreDisplayName = document.getElementById("highscore-initials");
-var endGameButtons = document.getElementById("endGameBtns");
-var submitScoreButton = document.getElementById("submitScore");
+var endGameBtns = document.getElementById("endGameBtns");
+var submitScoreBtn = document.getElementById("submitScore");
 var highscoreDisplayScore = document.getElementById("highscore-score");
 var buttonA = document.getElementById("a");
 var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
-// Quiz questions objects being stored
+// Quiz question object
 var quizQuestions = [{
     question: "How many elements can you apply an 'ID' attribute to?",
     choiceA: "As many as you want",
@@ -72,7 +72,7 @@ var quizQuestions = [{
 
 
     ];
-    // Other global variables
+// Other global variables
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
 var timeLeft = 76;
@@ -164,3 +164,54 @@ function generateHighscores(){
         highscoreDisplayScore.appendChild(newScoreSpan);
     }
 }
+
+// This function displays the high scores page while hiding all of the other pages from 
+function showHighscore(){
+    startQuizDiv.style.display = "none"
+    gameoverDiv.style.display = "none";
+    highscoreContainer.style.display = "flex";
+    highscoreDiv.style.display = "block";
+    endGameBtns.style.display = "flex";
+
+    generateHighscores();
+}
+
+// This function clears the local storage of the high scores as well as clearing the text from the high score board
+function clearScore(){
+    window.localStorage.clear();
+    highscoreDisplayName.textContent = "";
+    highscoreDisplayScore.textContent = "";
+}
+
+// This function sets all the variables back to their original values and shows the home page to enable replay of the quiz
+function replayQuiz(){
+    highscoreContainer.style.display = "none";
+    gameoverDiv.style.display = "none";
+    startQuizDiv.style.display = "flex";
+    timeLeft = 76;
+    score = 0;
+    currentQuestionIndex = 0;
+}
+
+// This function checks the response to each answer 
+function checkAnswer(answer){
+    correct = quizQuestions[currentQuestionIndex].correctAnswer;
+
+    if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
+        score++;
+        alert("That Is Correct!");
+        currentQuestionIndex++;
+        generateQuizQuestion();
+        //display in the results div that the answer is correct.
+    }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
+        alert("That Is Incorrect.")
+        currentQuestionIndex++;
+        generateQuizQuestion();
+        //display in the results div that the answer is wrong.
+    }else{
+        showScore();
+    }
+}
+
+// This button starts the quiz!
+startQuizButton.addEventListener("click",startQuiz);
