@@ -9,7 +9,7 @@ const initialsEl = document.getElementById('initials');
 const highScoresListEl = document.getElementById('highscores-list')
 const shuffledQuestionBank = shuffleQB();
 
-let secondsLeft = 60;
+let secondsLeft = 60; // how many seconds on the timer
 let currentScore = 0;
 let currentQ = -1;
 let finalScore;

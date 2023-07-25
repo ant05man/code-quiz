@@ -3,6 +3,10 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+h1 {
+    color: purple;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -21,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    color: red;
 }
 /* Hover selector for high scores link */
 a:hover {color: darkgray;}
