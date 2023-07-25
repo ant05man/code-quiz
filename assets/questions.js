@@ -10,21 +10,21 @@ const questionBank = [
     },
 
     {
-        question: 'Which of these array methods returns an array?',
+        question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
         answersArray: [
-            { answer: 'Array.splice()', correct: true }, 
-            { answer: 'Array.forEach()', correct: false },
-            { answer: 'Array.find()', correct: false },
-            { answer: 'Array.reduce()', correct: false }]
+            { answer: 'JavaScript', correct: true }, 
+            { answer: 'termina/bash', correct: false },
+            { answer: 'for loops', correct: false },
+            { answer: 'console log', correct: false }]
     },
 
     {
-        question: 'What is the function of `Array.unshift()`?',
+        question: 'Commonly used data types DO NOT include',
         answersArray: [
-            { answer: 'Removes first element of array', correct: true },  
-            { answer: 'Removes last element of array', correct: false },
-            { answer: 'Adds element to end of array', correct: false },
-            { answer: 'Adds element to start of array', correct: false }]
+            { answer: 'strings', correct: false },  
+            { answer: 'booleans', correct: false },
+            { answer: 'alerts', correct: true },
+            { answer: 'numbers', correct: false }]
     },
 
     {
