@@ -59,3 +59,67 @@ function nextQuestion() {
         }, i);
     };
 };
+
+// When user clicks an answer button
+function handleAnswerClick(event) {
+    // Get the correct answer string
+    let correctAnswer = getCorrectAnswer(currentQ);
+    // Compare to user click
+    if (event.target.textContent === correctAnswer) {
+        currentScore += 10;
+        // color indicates correct choice
+        event.target.classList.add('correct')
+    } else {
+        secondsLeft -= 10;
+        // color indicates wrong choice
+        event.target.classList.add('wrong')
+    }
+    // Wait 0.5 sec, reset btn color, go to next question
+    setTimeout(
+        () => {
+            event.target.className = 'btn';
+            nextQuestion();
+        }, 500);
+};
+
+
+function getCorrectAnswer(currentQ) {
+    let arr = shuffledQuestionBank[currentQ].answersArray;
+    // loop through answersArray, identify correct answer
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j].correct) {
+            // return correct answer.
+            return arr[j].answer
+        }
+    }
+};
+
+function endGame() {
+    timerEl.textContent = 0;
+    changeDiv('question-container', 'results-page');
+    // Log currentScore on results page
+    finalScore = currentScore;
+    finalScoreEl.textContent = finalScore;
+}
+
+function handleSubmit() {
+    let initials = initialsEl.value;
+    // get array from storage, or initialize as empty array
+    let highScoresList = JSON.parse(localStorage.getItem('highScores')) || [];
+    // push new score to array
+    highScoresList.push({ initials: initials, score: finalScore });
+    // sort array ascending
+    highScoresList = highScoresList.sort((curr, next) => {
+        if (curr.score < next.score) {
+            return 1
+        } else if (curr.score > next.score) {
+            return -1
+        } else {
+            return 0
+        }
+    });
+    // set updated array to local storage
+    localStorage.setItem('highScores', JSON.stringify(highScoresList))
+    // go to highscores page
+    window.location.href = './highscores.html';
+}

@@ -1,153 +1,86 @@
-:root{
-   background-color: rgb(224, 233, 253);
-   }
-   
-   li{
-       padding-bottom: 3px;
-       color: white;
-       text-shadow: 1.5px 1px 3px black;
-       list-style-type: none;
-   }
-   
-   p{
-       color: black;
-       text-shadow: .5px .5px white;
-       text-align: center;
-       font-size: xx-large;
-       font-family: sans-serif;
-   
-   }
-   h2{
-       font-family: sans-serif;
-       margin-top: -.5rem;
-   }
-   input{
-       text-align: center;
-   }
-   
-   .container {
-       width: 400px;
-       height: 600px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       max-width: 80rem;
-       margin: 0 auto;
-     }
-   
-     button {
-       display: inline-block;
-       font-family: sans-serif;
-       background-color: black;
-       border-radius: 10px;
-       border: 3px double #cccccc;
-       color: #eeeeee;
-       text-align: center;
-       font-size: 15px;
-       padding: 20px;
-       width: 200px;
-       margin-top: 3px;
-     }
-   
-     button:hover{
-         box-shadow: 4px 3px 6px black;
-         background-color: purple;
-     }
-   
-   #startpage{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
-   
-   #timer{
-       font-family: sans-serif;
-       background-color: navy;
-       color: #eeeeee;
-       font-size: x-large;
-       text-shadow: .5px .5px black;
-       text-align: center;
-   }
-   #quiz {
-       display: none;
-   }
-   #submitScore {
-      background-color: black(215, 6, 135);
-      color: white;
-      font-size: 24px;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  
-   }
-   
-   #result {
-       display: none;
-   }
-   
-   #gameover {
-       text-align: center;
-       display: none;
-       flex-direction: column;
-       align-items: center;
-   }
-   
-   #highScore{
-       height: 200px;
-       border: groove 2px;
-   }
-   
-   #high-scorePage{
-       display: none;
-       width: 50%;
-       border: solid;
-       border-color: silver;
-       border-bottom-style: groove;
-       padding-bottom: .3rem;
-       background: lightsteelblue;
-   }
-   
-   #highscore-header{
-       display:flex;
-       justify-content: space-around;
-       border-bottom-style: outset;
-       margin-bottom: .5rem;
-       background-color: black;
-       color: #eeeeee;
-       font-family: sans-serif;
-   }
-   #highscoreContainer{
-       height: 100%;
-       width: 100%;
-       display: none;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-   }
-   
-   #initials{
-       margin: .5rem;
-       height: 1.75rem;
-   }
-   
-   #highscore-initials{
-       display: inline-block;
-       padding-left: 9.5rem;
-       font-family: sans-serif;
-       font-weight: bold;
-   }
-   
-   #highscore-score{
-       float: right;
-       padding-right: 8.75rem;
-       font-family: sans-serif;
-       font-weight: bold;
-   }
-   
-   #finalScore{
-       padding-bottom: 0.5rem;
-       font-size: x-large;
-       font-family: sans-serif;
-       font-weight: bold;
-   }
-   
-   #endGameBtns{
-       display: none;
-   }
+* {
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: hsl(180, 100%, 30%);
+}
+/* Link to high scores & Timer aligned at header ends */
+.header {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+/* Hover selector for high scores link */
+a:hover {color: darkgray;}
+
+/* For navigating through questions */
+.hide {
+    display: none;
+}
+
+/* Main content on centered white card */
+.main {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 75%;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 2px;
+}
+
+/* Button stylings, hover effect */
+.btn {
+    border: 3px solid hsl(200, 100%, 25%);
+    border-radius: 5px;
+    background-color: hsl(200, 100%, 50%);
+    padding: 15px 20px;
+    margin: 15px;
+    color: white;
+    font-size: large;
+    width: 40%;
+}
+
+.btn.submit-btn {
+    border-width: 2px;
+    padding: 5px;
+    font-size: medium;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: hsl(200, 50%, 50%);
+}
+/* Correct answers revealed in green */
+.btn.correct {
+    background-color: hsl(120, 100%, 30%);
+    border-color: hsl(120, 100%, 20%);
+}
+/* Incorrect answers revealed in red */
+.btn.wrong {
+    background-color: hsl(0, 100%, 30%);
+    border-color: hsl(0, 100%, 20%);
+}
+
+/* Buttons arranged in column on xs devices */
+@media screen and (max-width: 576px) {
+    .btn {
+        width: 80%;
+        padding: 10px 15px;
+        margin: 5px 10px;
+    }
+}
