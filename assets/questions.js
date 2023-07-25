@@ -13,7 +13,7 @@ const questionBank = [
         question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
         answersArray: [
             { answer: 'JavaScript', correct: true }, 
-            { answer: 'termina/bash', correct: false },
+            { answer: 'terminal/bash', correct: false },
             { answer: 'for loops', correct: false },
             { answer: 'console log', correct: false }]
     },

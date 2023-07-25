@@ -63,7 +63,7 @@ a:hover {color: darkgray;}
 }
 
 .btn:hover {
-    background-color: hsl(200, 50%, 50%);
+    background-color: violet;
 }
 /* Correct answers revealed in green */
 .btn.correct {
