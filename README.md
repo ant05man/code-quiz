@@ -1,5 +1,5 @@
 # Code-Quiz
-
+https://ant05man.github.io/code-quiz/
 
 ## Description
 I learned how to properly incorporate timers and prompts that correspond to what is being shown. The purpose of this project was to create an interactive quiz that you take within a certain time limit and it transfers you to the next question to answer. If you answer anything incorrectly, your score will be deducted by 10 points. At the end of the quiz, you enter your initials and your score will be saved, unless you delete them with the 'Reset Scores' button. You have the option to try again after you take the quiz.
